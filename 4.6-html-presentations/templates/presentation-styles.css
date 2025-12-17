@@ -1,67 +1,230 @@
 /* ASOS Brand Presentation Styles */
+/* Official ASOS Design System Tokens */
 /* Use these styles in your reveal.js presentations */
 
 :root {
-  /* ASOS Brand Colors */
-  --asos-red: #d01345;
+  /* ========================================
+     ASOS Brand Colors (Light Mode)
+     ======================================== */
+  --color-brand-primary: #2d2d2d;
+  --color-brand-secondary: #525050;
+  --color-brand-accent: #d01345;
+  
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #eeeeee;
+  --color-bg-tertiary: #f8f8f8;
+  
+  --color-text-primary: #2d2d2d;
+  --color-text-secondary: #666666;
+  --color-text-inverse: #ffffff;
+  --color-text-disabled: #999999;
+  
+  --color-link: #2d2d2d;
+  --color-link-hover: #666666;
+  
+  /* Semantic Colors */
+  --color-success: #018849;
+  --color-warning: #ff9800;
+  --color-error: #d01345;
+  --color-info: #2d2d2d;
+  
+  /* ========================================
+     Typography - ASOS Official
+     ======================================== */
+  --font-family-primary: futura-pt, Tahoma, Geneva, Verdana, Arial, sans-serif;
+  --font-family-fallback: Tahoma, Geneva, Verdana, Arial, sans-serif;
+  
+  --font-size-xs: 11px;
+  --font-size-sm: 13px;
+  --font-size-base: 14px;
+  --font-size-md: 15px;
+  --font-size-lg: 16px;
+  --font-size-xl: 18px;
+  --font-size-2xl: 24px;
+  --font-size-3xl: 32px;
+  
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.4;
+  --line-height-relaxed: 1.6;
+  
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.05em;
+  --letter-spacing-wider: 0.1em;
+  
+  /* ========================================
+     Spacing - ASOS System
+     ======================================== */
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-5: 20px;
+  --spacing-6: 24px;
+  --spacing-8: 32px;
+  --spacing-10: 40px;
+  --spacing-12: 48px;
+  --spacing-16: 64px;
+  
+  /* ========================================
+     Borders - ASOS System
+     ======================================== */
+  --border-width-thin: 1px;
+  --border-width-medium: 2px;
+  --border-color-default: #eeeeee;
+  --border-color-strong: #2d2d2d;
+  
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  
+  /* ========================================
+     Shadows - ASOS System
+     ======================================== */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
+  
+  /* ========================================
+     Motion - ASOS System
+     ======================================== */
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+  --duration-slow: 500ms;
+  --easing-default: ease;
+  
+  /* Legacy compatibility */
+  --asos-red: var(--color-brand-accent);
   --asos-dark-red: #a00d35;
-  --asos-black: #2d2d2d;
-  --asos-grey: #666666;
-  --asos-light-grey: #f5f5f5;
-  --asos-white: #ffffff;
-  
-  /* Status Colors */
-  --success-green: #4CAF50;
-  --warning-orange: #FF9800;
+  --asos-black: var(--color-brand-primary);
+  --asos-grey: var(--color-text-secondary);
+  --asos-light-grey: var(--color-bg-secondary);
+  --asos-white: var(--color-bg-primary);
+  --success-green: var(--color-success);
+  --warning-orange: var(--color-warning);
   --info-blue: #2196F3;
-  --danger-red: #f44336;
-  
-  /* Spacing */
-  --spacing-xs: 4px;
-  --spacing-sm: 8px;
-  --spacing-md: 16px;
-  --spacing-lg: 24px;
-  --spacing-xl: 32px;
-  
-  /* Typography */
-  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --danger-red: var(--color-error);
 }
 
-/* Base Reveal Overrides */
+/* ========================================
+   DARK MODE - ASOS Theme
+   ======================================== */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg-primary: #1a1a1a;
+    --color-bg-secondary: #2d2d2d;
+    --color-bg-tertiary: #252525;
+    
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #b3b3b3;
+    --color-text-inverse: #2d2d2d;
+    --color-text-disabled: #666666;
+    
+    --color-link: #ffffff;
+    --color-link-hover: #b3b3b3;
+    
+    --border-color-default: #3d3d3d;
+    --border-color-strong: #ffffff;
+    
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.6);
+  }
+}
+
+/* Force Dark Mode Class */
+.reveal.dark-mode {
+  --color-bg-primary: #1a1a1a;
+  --color-bg-secondary: #2d2d2d;
+  --color-bg-tertiary: #252525;
+  
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #b3b3b3;
+  --color-text-inverse: #2d2d2d;
+  
+  --color-link: #ffffff;
+  --color-link-hover: #b3b3b3;
+  
+  --border-color-default: #3d3d3d;
+  --border-color-strong: #ffffff;
+}
+
+/* Force Light Mode Class */
+.reveal.light-mode {
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #eeeeee;
+  --color-bg-tertiary: #f8f8f8;
+  
+  --color-text-primary: #2d2d2d;
+  --color-text-secondary: #666666;
+  --color-text-inverse: #ffffff;
+  
+  --color-link: #2d2d2d;
+  --color-link-hover: #666666;
+  
+  --border-color-default: #eeeeee;
+  --border-color-strong: #2d2d2d;
+}
+
+/* ========================================
+   BASE REVEAL OVERRIDES - ASOS Theme
+   ======================================== */
 .reveal {
-  background: var(--asos-white);
-  font-family: var(--font-family);
+  background: var(--color-bg-primary);
+  font-family: var(--font-family-primary);
+  color: var(--color-text-primary);
+  transition: background-color var(--duration-normal) var(--easing-default),
+              color var(--duration-normal) var(--easing-default);
 }
 
 .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
-  color: var(--asos-black);
-  font-weight: 700;
+  color: var(--color-text-primary);
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-bold);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: var(--letter-spacing-wide);
+  transition: color var(--duration-normal) var(--easing-default);
 }
 
 .reveal h1 {
-  font-size: 2.5em;
-  margin-bottom: var(--spacing-lg);
+  font-size: var(--font-size-3xl);
+  margin-bottom: var(--spacing-6);
+  line-height: var(--line-height-tight);
 }
 
 .reveal h2 {
-  font-size: 2em;
-  margin-bottom: var(--spacing-md);
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--spacing-4);
+  line-height: var(--line-height-normal);
 }
 
 .reveal h3 {
-  font-size: 1.5em;
-  margin-bottom: var(--spacing-md);
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-4);
+  line-height: var(--line-height-normal);
+}
+
+.reveal p {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-primary);
 }
 
 .reveal strong {
-  color: var(--asos-red);
+  color: var(--color-brand-accent);
+  font-weight: var(--font-weight-bold);
 }
 
 .reveal a {
-  color: var(--asos-red);
+  color: var(--color-brand-accent);
   text-decoration: none;
+  transition: color var(--duration-fast) var(--easing-default);
 }
 
 .reveal a:hover {
@@ -71,11 +234,18 @@
 
 .reveal .progress {
   background: rgba(208, 19, 69, 0.2);
-  color: var(--asos-red);
+  color: var(--color-brand-accent);
 }
 
 .reveal .controls {
-  color: var(--asos-black);
+  color: var(--color-text-primary);
+  transition: color var(--duration-normal) var(--easing-default);
+}
+
+/* Slide Backgrounds */
+.reveal .slides section {
+  background: var(--color-bg-primary);
+  color: var(--color-text-primary);
 }
 
 /* Utility Classes */
@@ -111,70 +281,107 @@
   color: var(--danger-red);
 }
 
-/* Layout Components */
+/* ========================================
+   LAYOUT COMPONENTS - ASOS System
+   ======================================== */
 .highlight-box {
-  background: var(--asos-light-grey);
-  padding: var(--spacing-lg);
-  border-left: 4px solid var(--asos-red);
-  margin: var(--spacing-lg) 0;
+  background: var(--color-bg-tertiary);
+  padding: var(--spacing-6);
+  border-left: var(--border-width-medium) solid var(--color-brand-accent);
+  border-radius: var(--radius-sm);
+  margin: var(--spacing-6) 0;
   text-align: left;
+  transition: background-color var(--duration-normal) var(--easing-default);
 }
 
 .highlight-box.success {
-  border-left-color: var(--success-green);
+  border-left-color: var(--color-success);
 }
 
 .highlight-box.warning {
-  border-left-color: var(--warning-orange);
-  background: #fff3cd;
+  border-left-color: var(--color-warning);
+  background: rgba(255, 152, 0, 0.1);
 }
 
 .highlight-box.danger {
-  border-left-color: var(--danger-red);
-  background: #f8d7da;
+  border-left-color: var(--color-error);
+  background: rgba(208, 19, 69, 0.1);
 }
 
-/* Card Layouts */
+.highlight-box.info {
+  border-left-color: var(--color-info);
+}
+
+/* ========================================
+   CARD LAYOUTS - ASOS Design System
+   ======================================== */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: var(--spacing-lg);
-  margin: var(--spacing-lg) 0;
+  gap: var(--spacing-6);
+  margin: var(--spacing-6) 0;
 }
 
 .card {
-  background: var(--asos-white);
-  padding: var(--spacing-lg);
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: var(--color-bg-secondary);
+  padding: var(--spacing-6);
+  border-radius: var(--radius-md);
+  border: var(--border-width-thin) solid var(--border-color-default);
+  box-shadow: var(--shadow-md);
   text-align: center;
+  transition: all var(--duration-fast) var(--easing-default);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
 }
 
 .card h3 {
   margin: 0;
-  font-size: 2.5em;
-  color: var(--asos-black);
+  font-size: var(--font-size-3xl);
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-bold);
 }
 
 .card p {
-  margin: var(--spacing-sm) 0 0 0;
-  color: var(--asos-grey);
+  margin: var(--spacing-2) 0 0 0;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-base);
 }
 
-.card.primary h3 {
-  color: var(--asos-red);
+.card.primary {
+  background: var(--color-brand-accent);
+  color: var(--color-text-inverse);
+  border-color: var(--color-brand-accent);
+}
+
+.card.primary h3,
+.card.primary p {
+  color: var(--color-text-inverse);
 }
 
 .card.success h3 {
-  color: var(--success-green);
+  color: var(--color-success);
 }
 
 .card.warning h3 {
-  color: var(--warning-orange);
+  color: var(--color-warning);
 }
 
 .card.info h3 {
   color: var(--info-blue);
+}
+
+.card.dark {
+  background: var(--color-brand-primary);
+  color: var(--color-text-inverse);
+  border-color: var(--color-brand-primary);
+}
+
+.card.dark h3,
+.card.dark p {
+  color: var(--color-text-inverse);
 }
 
 /* Metric Cards */
@@ -277,33 +484,44 @@
   border-left-color: var(--danger-red);
 }
 
-/* Tables */
+/* ========================================
+   TABLES - ASOS System
+   ======================================== */
 .reveal table {
   border-collapse: collapse;
   width: 100%;
-  margin: var(--spacing-lg) 0;
+  margin: var(--spacing-6) 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
 }
 
 .reveal table th {
-  background: var(--asos-black);
-  color: var(--asos-white);
-  padding: var(--spacing-md);
+  background: var(--color-brand-primary);
+  color: var(--color-text-inverse);
+  padding: var(--spacing-4);
   text-align: left;
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-sm);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
 }
 
 .reveal table td {
-  border: 1px solid #ddd;
-  padding: var(--spacing-md);
+  border: var(--border-width-thin) solid var(--border-color-default);
+  padding: var(--spacing-4);
   text-align: left;
+  font-size: var(--font-size-base);
+  color: var(--color-text-primary);
+  transition: background-color var(--duration-fast) var(--easing-default);
 }
 
 .reveal table tr:nth-child(even) {
-  background: var(--asos-light-grey);
+  background: var(--color-bg-tertiary);
 }
 
-.reveal table tr:hover {
-  background: #e8e8e8;
+.reveal table tr:hover td {
+  background: var(--color-bg-secondary);
 }
 
 /* Images */
@@ -518,4 +736,151 @@
   .reveal table {
     font-size: 0.8em;
   }
+  
+  .theme-toggle {
+    display: none;
+  }
+}
+
+/* ========================================
+   DARK MODE TOGGLE BUTTON
+   ======================================== */
+.theme-toggle {
+  position: fixed;
+  top: var(--spacing-4);
+  right: var(--spacing-4);
+  z-index: 100;
+  background: var(--color-bg-secondary);
+  border: var(--border-width-thin) solid var(--border-color-default);
+  border-radius: var(--radius-full);
+  padding: var(--spacing-2) var(--spacing-4);
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  transition: all var(--duration-fast) var(--easing-default);
+  box-shadow: var(--shadow-md);
+}
+
+.theme-toggle:hover {
+  background: var(--color-brand-accent);
+  color: var(--color-text-inverse);
+  border-color: var(--color-brand-accent);
+  transform: scale(1.05);
+}
+
+.theme-toggle svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+/* ========================================
+   ASOS ICON STYLES
+   ======================================== */
+.asos-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+  vertical-align: middle;
+  transition: fill var(--duration-fast) var(--easing-default);
+}
+
+.asos-icon.sm {
+  width: 16px;
+  height: 16px;
+}
+
+.asos-icon.lg {
+  width: 32px;
+  height: 32px;
+}
+
+.asos-icon.xl {
+  width: 48px;
+  height: 48px;
+}
+
+/* Icon Colors */
+.asos-icon.primary {
+  fill: var(--color-brand-primary);
+}
+
+.asos-icon.accent {
+  fill: var(--color-brand-accent);
+}
+
+.asos-icon.success {
+  fill: var(--color-success);
+}
+
+.asos-icon.warning {
+  fill: var(--color-warning);
+}
+
+.asos-icon.error {
+  fill: var(--color-error);
+}
+
+/* ========================================
+   ASOS BRAND LOGO PLACEHOLDER
+   ======================================== */
+.asos-logo {
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-2xl);
+  letter-spacing: var(--letter-spacing-wider);
+  color: var(--color-brand-primary);
+  text-transform: uppercase;
+}
+
+.asos-logo.inverse {
+  color: var(--color-text-inverse);
+}
+
+/* ========================================
+   PRESENTATION FOOTER - ASOS Branding
+   ======================================== */
+.reveal .slide-number {
+  background: var(--color-brand-primary);
+  color: var(--color-text-inverse);
+  padding: var(--spacing-1) var(--spacing-3);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* ========================================
+   KEYBOARD SHORTCUT REFERENCE
+   ======================================== */
+.keyboard-shortcuts {
+  position: fixed;
+  bottom: var(--spacing-4);
+  left: var(--spacing-4);
+  background: var(--color-bg-secondary);
+  border: var(--border-width-thin) solid var(--border-color-default);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-3);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  opacity: 0.7;
+  transition: opacity var(--duration-fast) var(--easing-default);
+}
+
+.keyboard-shortcuts:hover {
+  opacity: 1;
+}
+
+.keyboard-shortcuts kbd {
+  background: var(--color-brand-primary);
+  color: var(--color-text-inverse);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  font-family: monospace;
+  font-size: var(--font-size-xs);
+  margin: 0 2px;
 }

@@ -9,95 +9,19 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css">
   
-  <!-- Custom ASOS Theme -->
-  <style>
-    .reveal {
-      background: #ffffff;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    }
-    
-    .reveal h1, .reveal h2, .reveal h3 {
-      color: #2d2d2d;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-    
-    .reveal h1 {
-      font-size: 2.5em;
-    }
-    
-    .reveal strong {
-      color: #d01345;
-    }
-    
-    .reveal .progress {
-      background: rgba(208, 19, 69, 0.2);
-      color: #d01345;
-    }
-    
-    .reveal .controls {
-      color: #2d2d2d;
-    }
-    
-    .reveal a {
-      color: #d01345;
-    }
-    
-    .reveal a:hover {
-      color: #a00d35;
-    }
-    
-    .reveal section img {
-      border: none;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-    
-    .reveal table {
-      border-collapse: collapse;
-      width: 100%;
-    }
-    
-    .reveal table th {
-      background: #2d2d2d;
-      color: white;
-      padding: 12px;
-    }
-    
-    .reveal table td {
-      border: 1px solid #ddd;
-      padding: 12px;
-    }
-    
-    .highlight-box {
-      background: #f5f5f5;
-      padding: 20px;
-      border-left: 4px solid #d01345;
-      margin: 20px 0;
-    }
-    
-    .metric-card {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      padding: 30px;
-      border-radius: 10px;
-      color: white;
-      text-align: center;
-      margin: 10px;
-    }
-    
-    .metric-card h3 {
-      margin: 0;
-      font-size: 3em;
-      color: white;
-    }
-    
-    .metric-card p {
-      margin: 10px 0 0 0;
-      color: rgba(255, 255, 255, 0.9);
-    }
-  </style>
+  <!-- ASOS Official Design System -->
+  <link rel="stylesheet" href="presentation-styles.css">
 </head>
 <body>
+  <!-- Dark Mode Toggle -->
+  <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+    <svg class="sun-icon" viewBox="0 0 24 24" fill="currentColor">
+      <circle cx="12" cy="12" r="5"/>
+      <path d="M12 1v6M12 17v6M4.22 4.22l4.24 4.24M15.54 15.54l4.24 4.24M1 12h6M17 12h6M4.22 19.78l4.24-4.24M15.54 8.46l4.24-4.24"/>
+    </svg>
+    <span class="theme-label">Light</span>
+  </button>
+
   <div class="reveal">
     <div class="slides">
       
@@ -353,7 +277,45 @@
       day: 'numeric'
     });
     
-    // Initialize Reveal
+    // Dark Mode Toggle using ASOS Design System
+    function toggleTheme() {
+      const reveal = document.querySelector('.reveal');
+      const themeLabel = document.querySelector('.theme-label');
+      const isDark = reveal.classList.contains('dark-mode');
+      
+      if (isDark) {
+        reveal.classList.remove('dark-mode');
+        reveal.classList.add('light-mode');
+        themeLabel.textContent = 'Light';
+        localStorage.setItem('asos-presentation-theme', 'light');
+      } else {
+        reveal.classList.remove('light-mode');
+        reveal.classList.add('dark-mode');
+        themeLabel.textContent = 'Dark';
+        localStorage.setItem('asos-presentation-theme', 'dark');
+      }
+    }
+    
+    // Load saved theme preference
+    function loadTheme() {
+      const savedTheme = localStorage.getItem('asos-presentation-theme');
+      const reveal = document.querySelector('.reveal');
+      const themeLabel = document.querySelector('.theme-label');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      
+      if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+        reveal.classList.add('dark-mode');
+        themeLabel.textContent = 'Dark';
+      } else {
+        reveal.classList.add('light-mode');
+        themeLabel.textContent = 'Light';
+      }
+    }
+    
+    // Load theme immediately
+    loadTheme();
+    
+    // Initialize Reveal with ASOS settings
     Reveal.initialize({
       hash: true,
       slideNumber: 'c/t',
@@ -362,10 +324,14 @@
       
       // Keyboard shortcuts
       keyboard: {
-        // Use 'b' to toggle blackout
+        // 't' to toggle theme
+        84: function() {
+          toggleTheme();
+        },
+        // 'b' to toggle blackout
         66: function() {
           var body = document.body;
-          body.style.backgroundColor = body.style.backgroundColor === 'black' ? 'white' : 'black';
+          body.style.backgroundColor = body.style.backgroundColor === 'black' ? '' : 'black';
         }
       }
     });
