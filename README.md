@@ -24,7 +24,7 @@ https://github.com/asos-conradannan/vscode-pm-course-asos
 
 ## Course Structure
 
-### Module 4: MCP Integration for PMs (6 lessons, ~2.5 hours)
+### Module 4: MCP Integration for PMs (5 lessons, ~2 hours)
 
 **4.1 Introduction to MCPs** (20 minutes)
 - What is Model Context Protocol?
@@ -67,22 +67,12 @@ https://github.com/asos-conradannan/vscode-pm-course-asos
 - Cross-board analysis
 - **Time saved:** 83 min per workshop (80-90% reduction)
 
-**4.6 Build HTML Presentations (BONUS)** (35 minutes)
-- Create reveal.js presentations
-- Pull data from all MCP tools
-- Build interactive dashboards
-- Add charts and visualizations
-- ASOS brand styling
-- Export to PDF and host online
-- **Includes:** 3 complete templates
-- **Time saved:** 2+ hours per presentation
-
 ---
 
 ## What You'll Get
 
 ### Teaching Scripts
-- 6 comprehensive interactive lessons
+- 5 comprehensive interactive lessons
 - STOP/WAIT teaching pattern for engagement
 - Real ASOS PM scenarios and workflows
 - Best practices and troubleshooting guides
@@ -90,9 +80,6 @@ https://github.com/asos-conradannan/vscode-pm-course-asos
 ### Templates & Examples
 - **PRD Template** - 10-section structure
 - **User Story Template** - Complete with acceptance criteria
-- **Basic Reveal.js Presentation** - Feature proposal template
-- **Dashboard Presentation** - Sprint review with charts
-- **ASOS Presentation Styles** - Complete CSS stylesheet
 
 ### Tools Integration
 - Atlassian MCP (Confluence)
@@ -111,10 +98,9 @@ https://github.com/asos-conradannan/vscode-pm-course-asos
 | Azure DevOps | 6h | 2h | 4h |
 | Figma | 5h | 1h | 4h |
 | Miro (monthly workshops) | 6h | 30m | 5.5h |
-| Presentations | 4h | 1h | 3h |
 
-**Total Weekly Savings:** 17-33 hours  
-**ROI:** 50-100% productivity increase
+**Total Weekly Savings:** 15-25 hours  
+**ROI:** 40-80% productivity increase
 
 ---
 
@@ -165,17 +151,14 @@ Each module is self-contained in its own folder:
       └── user-story-template.md
 
 4.4-figma-collaboration/
-  └── SCRIPT.md
+  ├── SCRIPT.md
+  └── examples/
+      └── design-spec-example.md
 
 4.5-miro-boards/
-  └── SCRIPT.md
-
-4.6-html-presentations/
   ├── SCRIPT.md
-  └── templates/
-      ├── reveal-basic.html
-      ├── reveal-dashboard.html
-      └── presentation-styles.css
+  └── examples/
+      └── workshop-summary-example.md
 ```
 
 ---
@@ -239,9 +222,8 @@ By completing Part 2, you'll be able to:
 - ✅ Manage Azure DevOps work items with AI
 - ✅ Extract and reference Figma designs
 - ✅ Synthesize Miro workshop outputs in minutes
-- ✅ Build stunning HTML presentations with live data
 - ✅ Integrate all tools for seamless PM workflows
-- ✅ Save 17-33 hours per week on execution tasks
+- ✅ Save 15-25 hours per week on execution tasks
 
 ---
 
@@ -279,7 +261,7 @@ https://github.com/asos-conradannan/vscode-pm-course-asos
 
 ## License & Sharing
 
-This course is designed for internal ASOS use. Feel free to share with fellow PMs and customize for your team's needs.
+This course is designed for internal ASOS use. Feel free to share with fellow PMs and customise for your team's needs.
 
 ---
 
@@ -297,7 +279,7 @@ This course is designed for internal ASOS use. Feel free to share with fellow PM
 1. ✅ Complete Part 1 (if you haven't already)
 2. 🚀 Start Module 4.1 - Introduction to MCPs
 3. 🔧 Configure your MCP tools
-4. 📚 Work through modules 4.2-4.6
+4. 📚 Work through modules 4.2-4.5
 5. 🎯 Apply to real PM work immediately
 6. 📣 Share your success with the team!
 

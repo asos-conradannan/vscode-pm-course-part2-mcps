@@ -1,6 +1,7 @@
 # Module 4.1: Introduction to MCPs
 
-**Teaching Script for GitHub Copilot**
+**Teaching Script for GitHub Copilot**  
+**Duration:** ~20 minutes
 
 ---
 
@@ -30,8 +31,8 @@ Let me show you the difference:
 - Context: Lost in translation
 
 **With MCPs:**
-- You: "Analyze sprint burndown from Azure DevOps project"
-- Copilot: Fetches data, analyzes, suggests actions
+- You: "Analyse sprint burndown from Azure DevOps project"
+- Copilot: Fetches data, analyses, suggests actions
 - Time: 30 seconds
 - Context: Perfect accuracy
 
@@ -45,13 +46,12 @@ USER: Responds
 
 ## What You'll Learn in Module 4
 
-Over the next 6 lessons, you'll master MCP integration with:
+Over the next 5 lessons, you'll master MCP integration with:
 
 **4.2 Confluence** - Read/write docs, search knowledge base, sync PRDs  
 **4.3 Azure DevOps** - Create work items, query sprints, update boards  
 **4.4 Figma** - Reference designs, extract specs, sync with docs  
-**4.5 Miro** - Create boards, extract insights, collaborate visually  
-**4.6 HTML Presentations (Bonus)** - Build stakeholder decks from your work
+**4.5 Miro** - Create boards, extract insights, collaborate visually
 
 Each lesson follows the same pattern:
 1. **Connect** - Set up the MCP
@@ -138,7 +138,7 @@ Once connected, you'll use Copilot naturally:
 
 **Figma Examples:**
 - "Show me the latest designs for the PDP redesign"
-- "Extract color tokens from the design system"
+- "Extract colour tokens from the design system"
 - "What components are in the header mockup?"
 
 **Miro Examples:**
@@ -198,7 +198,7 @@ Here's what a typical day looks like with MCP integration:
 - Reference in acceptance criteria
 
 **2:00 PM - Sprint Planning Prep**
-- "Analyze last 3 sprints velocity in Azure DevOps"
+- "Analyse last 3 sprints velocity in Azure DevOps"
 - "Get roadmap from Miro board"
 - Create sprint plan doc in Confluence
 

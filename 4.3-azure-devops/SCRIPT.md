@@ -1,6 +1,7 @@
 # Module 4.3: Azure DevOps Integration
 
-**Teaching Script for GitHub Copilot**
+**Teaching Script for GitHub Copilot**  
+**Duration:** ~30 minutes
 
 ---
 
@@ -13,7 +14,7 @@ Time to connect Copilot to your project management system and automate the busyw
 By the end of this lesson, you'll be able to:
 - Query work items without opening browser
 - Create user stories and bugs from VSCode
-- Analyze sprint metrics automatically
+- Analyse sprint metrics automatically
 - Update task status conversationally
 - Generate team reports instantly
 
@@ -34,14 +35,14 @@ Let me show you the transformation:
 4. Open each item to read details
 5. Create new items (fill in all fields manually)
 6. Update status (click, select, save)
-7. Generate reports (export, analyze, format)
+7. Generate reports (export, analyse, format)
 8. **Time: 30-60 minutes per day**
 
 **New workflow (with MCP):**
 1. "Show me all my active work items"
 2. "Create a user story for size recommendation"
 3. "Update task 1234 to 'In Progress'"
-4. "Analyze last 3 sprints velocity"
+4. "Analyse last 3 sprints velocity"
 5. **Time: 3-5 minutes total**
 
 **Time saved:** 25-55 minutes daily = **2-4.5 hours per week**
@@ -121,7 +122,7 @@ ACTION: Use the work item query tool to fetch their assigned items. Display:
 Excellent! You just queried your backlog without opening Azure DevOps
 
 Notice you got:
-- Clean, organized list
+- Clean, organised list
 - Key information at a glance
 - Work item IDs for deeper access
 
@@ -169,13 +170,13 @@ ACTION: Fetch complete work item using `mcp_azure-devops_wit_get_work_item`. Dis
 
 Perfect! Now you have full context without browser tab switching
 
-**Exercise 5: Analyze Work Item**
+**Exercise 5: Analyse Work Item**
 
 STOP: Ask me: "Based on this work item, what are the key risks and what's missing from acceptance criteria?"
 
 USER: Types command
 
-ACTION: Analyze the work item content and provide PM insights on completeness, clarity, and risks.
+ACTION: Analyse the work item content and provide PM insights on completeness, clarity, and risks.
 
 ---
 
@@ -410,7 +411,7 @@ USER: Types command
 
 ACTION:
 1. Query unassigned bugs
-2. Analyze descriptions for impact keywords
+2. Analyse descriptions for impact keywords
 3. Suggest priority levels
 4. Offer to update in bulk
 
@@ -447,7 +448,7 @@ Link back to Confluence PRD
 
 **Module 2.2 (Data Analysis):**
 ```
-Analyze sprint metrics
+Analyse sprint metrics
   ↓
 Identify bottlenecks
   ↓
@@ -596,7 +597,7 @@ You can now:
 ✓ Query work items without browser
 ✓ Create user stories conversationally
 ✓ Update task status instantly
-✓ Analyze sprint metrics automatically
+✓ Analyse sprint metrics automatically
 ✓ Generate team reports in seconds
 ✓ Automate your PM workflow
 

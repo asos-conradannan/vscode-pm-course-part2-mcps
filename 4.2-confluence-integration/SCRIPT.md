@@ -1,6 +1,7 @@
 # Module 4.2: Confluence Integration
 
-**Teaching Script for GitHub Copilot**
+**Teaching Script for GitHub Copilot**  
+**Duration:** ~30 minutes
 
 ---
 
@@ -37,7 +38,7 @@ Let me show you the workflow transformation:
 8. **Time: 8-10 minutes per search**
 
 **New workflow (with MCP):**
-1. "Search Confluence for checkout optimization research"
+1. "Search Confluence for checkout optimisation research"
 2. Copilot shows results with summaries
 3. "Add key findings to my PRD"
 4. **Time: 30 seconds**
@@ -175,7 +176,7 @@ STOP: Ask me: "From this page content, extract the top 3 customer pain points me
 
 USER: Types command
 
-ACTION: Analyze the content and extract structured insights, demonstrating how Copilot synthesizes Confluence content.
+ACTION: Analyse the content and extract structured insights, demonstrating how Copilot synthesizes Confluence content.
 
 ---
 
@@ -275,7 +276,7 @@ Let's combine everything into actual PM workflows
 
 Scenario: Sprint planning needs context from multiple sources
 
-STOP: Ask me: "Search Confluence for all pages about 'checkout optimization' in the last 6 months, then create a summary document with key findings"
+STOP: Ask me: "Search Confluence for all pages about 'checkout optimisation' in the last 6 months, then create a summary document with key findings"
 
 USER: Types command
 
@@ -333,7 +334,7 @@ Share URL with stakeholders
 
 **Module 2.2 (Data Analysis):**
 ```
-Analyze CSV data with Copilot
+Analyse CSV data with Copilot
   ↓
 Create insights document
   ↓
@@ -379,7 +380,7 @@ STOP: Try: "Find the PRD template page and create a new page using that structur
 
 USER: Types command
 
-ACTION: Fetch template, apply to new page, customize for the feature.
+ACTION: Fetch template, apply to new page, customise for the feature.
 
 ---
 
@@ -498,7 +499,7 @@ You've mastered Confluence MCP! Next: **Azure DevOps Integration**
 **In Module 4.3, you'll learn:**
 - Query work items without browser
 - Create user stories from VSCode
-- Analyze sprint burndown automatically
+- Analyse sprint burndown automatically
 - Update task status in conversation
 - Generate team reports
 

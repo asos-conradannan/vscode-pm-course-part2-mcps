@@ -1,6 +1,7 @@
 # Module 4.4: Figma Collaboration
 
-**Teaching Script for GitHub Copilot**
+**Teaching Script for GitHub Copilot**  
+**Duration:** ~25 minutes
 
 ---
 
@@ -134,7 +135,7 @@ ACTION: Explain the workflow possibilities:
 
 Scenario: You need button specs for your PRD
 
-STOP: Ask me: "If I had Figma MCP access, show me how I would extract button component specifications including colors, padding, and states"
+STOP: Ask me: "If I had Figma MCP access, show me how I would extract button component specifications including colours, padding, and states"
 
 USER: Types command
 
@@ -186,17 +187,17 @@ No manual measurement needed!
 
 ## Phase 5: Design Token Extraction
 
-**Exercise 3: Extract Color Palette**
+**Exercise 3: Extract Colour Palette**
 
-STOP: Ask me: "Explain how Figma MCP could extract our design system colors and convert them to CSS variables"
+STOP: Ask me: "Explain how Figma MCP could extract our design system colours and convert them to CSS variables"
 
 USER: Types command
 
 ACTION: Explain the workflow:
 
 ```
-1. Query: "Get all color styles from design system file"
-   Returns: Named colors with hex values
+1. Query: "Get all colour styles from design system file"
+   Returns: Named colours with hex values
 
 2. Copilot converts to CSS:
    --color-brand-primary: #2d2d2d;
@@ -339,7 +340,7 @@ For Engineers:
 2. "For each component, get:
    - Visual specs
    - Interaction states
-   - Responsive behavior
+   - Responsive behaviour
    - Accessibility requirements"
 3. "Generate handoff document formatted for engineering"
 4. "Create work items in Azure DevOps for each component"
@@ -361,7 +362,7 @@ USER: Types command
 ACTION: Show sync validation:
 
 ```
-1. "Extract color styles from Figma design system"
+1. "Extract colour styles from Figma design system"
 2. "Read our starter-tokens.css file"
 3. "Compare and report differences"
 

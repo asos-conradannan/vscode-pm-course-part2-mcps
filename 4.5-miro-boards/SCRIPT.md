@@ -1,6 +1,7 @@
 # Module 4.5: Miro Visual Collaboration
 
-**Teaching Script for GitHub Copilot**
+**Teaching Script for GitHub Copilot**  
+**Duration:** ~25 minutes
 
 ---
 
@@ -68,6 +69,8 @@ ACTION: List available Miro MCP tools:
 - `mcp_my-mcp-server_board_get_image_data` - Get image data for items
 - `mcp_my-mcp-server_board_get_image_download_url` - Get download URLs for images
 
+> **Note:** Tool names may vary based on your MCP configuration. The pattern is typically `mcp_[server-name]_[action]`. Check your available tools with: "What Miro MCP tools do I have access to?"
+
 Explain these give read access to Miro boards, perfect for extracting workshop outputs and documenting visual work.
 
 ---
@@ -110,7 +113,7 @@ Excellent! You just accessed your Miro board without opening browser
 Notice you got:
 - All board elements
 - Item types and content
-- Structured data you can analyze
+- Structured data you can analyse
 
 **Exercise 2: Filter by Item Type**
 
@@ -135,7 +138,7 @@ USER: Types command
 ACTION:
 1. Fetch all sticky notes
 2. Read text content
-3. Analyze and categorize (e.g., "checkout friction", "sizing uncertainty", "delivery concerns")
+3. Analyse and categorise (e.g., "checkout friction", "sizing uncertainty", "delivery concerns")
 4. Group similar notes
 5. Present categorized summary
 
@@ -155,7 +158,7 @@ Theme 2: Sizing Uncertainty (12 notes)
 
 ---
 
-Perfect! You just synthesized 2 hours of workshop into organized insights
+Perfect! You just synthesised 2 hours of workshop into organised insights
 
 **What happened:**
 - Extracted all text automatically
@@ -169,7 +172,7 @@ STOP: Ask me: "From these insights, generate prioritized action items for the pr
 
 USER: Types command
 
-ACTION: Analyze the categorized themes and create:
+ACTION: Analyse the categorised themes and create:
 1. High priority actions (most mentioned)
 2. Medium priority actions
 3. Quick wins (easy to implement)
@@ -201,7 +204,7 @@ USER: Types command
 ACTION:
 1. Fetch all card items
 2. Extract titles and descriptions
-3. Organize by position (boards often use spatial layout for time)
+3. Organise by position (boards often use spatial layout for time)
 4. Create formatted timeline
 
 Example output:
@@ -351,7 +354,7 @@ ACTION:
 
 Output:
 AWARENESS STAGE:
-✓ Delight: Personalized ads performing well
+✓ Delight: Personalised ads performing well
 ✗ Pain: Hard to find specific items (7 mentions)
 
 CONSIDERATION STAGE:
@@ -394,7 +397,7 @@ RECOMMENDATIONS:
 
 Many workshops use voting dots in Miro
 
-STOP: Ask me: "Analyze voting on feature ideas board - count votes per card and rank by priority"
+STOP: Ask me: "Analyse voting on feature ideas board - count votes per card and rank by priority"
 
 USER: Types command
 
@@ -483,7 +486,7 @@ USER: Responds
 
 **During workshop:**
 - Encourage clear, complete sticky notes
-- Use frames to organize themes
+- Use frames to organise themes
 - Tag items with metadata
 
 **After workshop:**
