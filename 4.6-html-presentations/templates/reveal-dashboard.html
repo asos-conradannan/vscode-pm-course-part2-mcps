@@ -463,8 +463,8 @@
             }, {
               label: 'Actual Burndown',
               data: [42, 40, 35, 30, 28, 23, 21, 16, 14, null],
-              borderColor: '#d01345', // ASOS Red
-              backgroundColor: 'rgba(208, 19, 69, 0.1)',
+              borderColor: '#6366f1', // Subtle Indigo
+              backgroundColor: 'rgba(99, 102, 241, 0.1)',
               fill: true,
               tension: 0.1
             }]
@@ -487,11 +487,12 @@
               y: {
                 beginAtZero: true,
                 max: 45,
+                grid: {
+                  color: 'rgba(0, 0, 0, 0.06)', // Very subtle premium grid
+                  lineWidth: 1
+                },
                 ticks: {
                   color: textColor
-                },
-                grid: {
-                  color: gridColor
                 },
                 title: {
                   display: true,
@@ -500,11 +501,12 @@
                 }
               },
               x: {
+                grid: {
+                  color: 'rgba(0, 0, 0, 0.06)', // Very subtle premium grid
+                  lineWidth: 1
+                },
                 ticks: {
                   color: textColor
-                },
-                grid: {
-                  color: gridColor
                 }
               }
             }
@@ -592,18 +594,18 @@
             datasets: [{
               label: 'Current Sprint',
               data: [4.5, 4.2, 4.0, 3.8, 4.3],
-              backgroundColor: 'rgba(208, 19, 69, 0.2)',
-              borderColor: '#d01345', // ASOS Red
-              pointBackgroundColor: '#d01345',
+              backgroundColor: 'rgba(139, 92, 246, 0.2)', // Purple
+              borderColor: '#8b5cf6', // Subtle Purple
+              pointBackgroundColor: '#8b5cf6',
               pointBorderColor: '#fff',
               pointHoverBackgroundColor: '#fff',
-              pointHoverBorderColor: '#d01345'
+              pointHoverBorderColor: '#8b5cf6'
             }, {
               label: 'Previous Sprint',
               data: [4.0, 4.0, 3.5, 3.5, 4.0],
-              backgroundColor: 'rgba(140, 140, 140, 0.2)',
-              borderColor: '#8c8c8c',
-              pointBackgroundColor: '#8c8c8c',
+              backgroundColor: 'rgba(99, 102, 241, 0.2)', // Indigo
+              borderColor: '#6366f1', // Subtle Indigo
+              pointBackgroundColor: '#6366f1',
               pointBorderColor: '#fff',
               pointHoverBackgroundColor: '#fff',
               pointHoverBorderColor: '#8c8c8c'
